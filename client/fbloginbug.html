@@ -1,0 +1,42 @@
+<head>
+          <title>Test</title>
+          <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+</head>
+
+<body>
+        {{> body}}
+
+</body>
+
+<template name="body">
+        <div id="menu-wrapper" class="">
+                <div id="wrapper">
+
+                <div id="app">
+                        {{#if currentUser}}
+                                Logged In
+                        {{else}}
+                                {{> user_loggedout}}
+                        {{/if}}
+                </div>
+                <div class="fix-fixed"></div>
+            </div>
+        </div>
+</template>
+
+
+
+<template name="nav">
+    <div id="page-header" class="">
+        <!--<a class="button header-left menu" id="show-menu"></a>-->
+        <span class="page-title">Test</span>
+    </div>
+</template>
+
+
+
+<template name="user_loggedout">
+        <div id="login_wrapper">
+                <a class="" href="#" id="login"><span class="login_button"></span>Sign Up With Facebook</a>
+        </div>
+</template>
